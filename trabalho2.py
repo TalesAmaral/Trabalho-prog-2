@@ -21,7 +21,10 @@ def isEqual(mA,mB):
             if mA[i][g] != mB[i][g]:
                 return 0
     return 1
-print(isEqual([[1,2],[3,4]],[[1,2],[1,4]]))
             
+def pegarDiagonal(m):
+    n = min(len(m),len(m[0]))
+    return [m[i][i] for i in range(n)]
+
 
 
