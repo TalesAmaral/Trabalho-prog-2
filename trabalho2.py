@@ -25,6 +25,22 @@ def isEqual(mA,mB):
 def pegarDiagonal(m):
     n = min(len(m),len(m[0]))
     return [m[i][i] for i in range(n)]
+def isTriangularSup(m):
+    if len(m) != len(m[0]):
+        return 0
+    for i in range(len(m)):
+        for g in range(i+1,len(m)):
+            if m[i][g] != 0:
+                return 0
+def isTriangularInf(m):
+    if len(m) != len(m[0]):
+        return 0
+    for i in range(len(m)):
+        for g in range(i-1,-1, -1):
+            if m[i][g] != 0:
+                return 0
+
+        
 
 
 
