@@ -55,10 +55,15 @@ def trocarLinhas(matriz,l1,l2):
 
 def trocarColunas(matriz,c1,c2):
     m = matriz[:]
-    m[l1],m[l2] = m[l2],m[l1]
+    for i in range(len(matriz)):
+        m[i][c1], m[i][c2] = m[i][c2],m[i][c1]
     return m
 
-print(trocarLinhas([[2,0],[0,2]], 0,1)) 
+def calcularErro(listaY,listaX,a,b):
+    soma = 0
+    for i in range(1,6):
+        soma+=(a*listaX[i] +b-listaY[i])**2
+    return soma
 
 
 
