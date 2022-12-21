@@ -1,4 +1,5 @@
 # Trabalho-prog-2
 Grupo
-tales da silva amaral
+Tales da Silva Amaral
 André felipe
+Maria Luz
