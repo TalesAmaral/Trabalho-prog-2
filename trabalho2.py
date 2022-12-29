@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import numpy as np  
 def produto(mA,mB):
     if len(mA[0]) != len(mB):
         raise Exception("colunas da primeira diferente das linhas da segunda.")
@@ -61,9 +63,25 @@ def trocarColunas(matriz,c1,c2):
 
 def calcularErro(listaY,listaX,a,b):
     soma = 0
-    for i in range(1,6):
+    for i in range(1,len(listaX)):
         soma+=(a*listaX[i] +b-listaY[i])**2
     return soma
 
+
+def grafico(listaY,listaX):
+    a = float(input("digite o valor de a:"))
+    b = float(input("digite o valor de b:"))
+    while a!=0:
+        x = np.array(range(min(listaX)-1, max(listaX)+1))
+        y = a*x+b
+        plt.plot(x,y)
+        plt.scatter(listaX,listaY)
+        plt.show()
+        print(calcularErro(listaY,listaX,a,b))
+        a = float(input("digite o valor de a:"))
+        b = float(input("digite o valor de b:"))
+
+
+    return 0
 
 
